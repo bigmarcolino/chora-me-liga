@@ -18,7 +18,7 @@ public class Find {
 	public static void main(String[] args) {
 		String nome = "Vinicius";
 		String token = "EAACEdEose0cBANlqsLknLXzKWcgtOqu7pEKqJ4yPndztqiNnprZBGVB7ZCHc6kDCJFGRPWxI20nH4DC5J627V3oqOE9HeWuVdpn6ciM81mqRg5ZBGXGtiLhCRL8BnmOL0TrLImLu5xEBS72jyNVOtpn1PtJLm5xxgjSbys9krA440bLO3isUYMWjV4ZCPkDygs2eWHCxZAAZDZD";
-		String groupId = "882121291963635";
+		String eventId = "882121291963635";
 		URL url;
 		File arquivoFinal = new File("arquivoFinal");
 		PrintWriter writer = null;
@@ -36,7 +36,7 @@ public class Find {
 		int idArquivo = 1;
 		
 		try {
-			url = new URL("https://graph.facebook.com/v2.0/" + groupId + "/attending?access_token=" + token);
+			url = new URL("https://graph.facebook.com/v2.0/" + eventId + "/attending?access_token=" + token);
 			File arquivo = new File("arquivo" + idArquivo);
 			idArquivo++;
 			FileUtils.copyURLToFile(url, arquivo);
